@@ -139,3 +139,17 @@ fileOpen(args, argv);
 
 
 }
+
+// isOpCode
+int isOpcode(char *inst ){
+    int pair = 0;
+    for(pair = 0; pair < 32; pair++){
+        if(strcomp(inst, Opcode[pair]) == 0){
+            return 1;   // we have a pair (opcode)
+        }
+    }
+            return 0; // not a pair, not an opcode
+}
+
+
+
